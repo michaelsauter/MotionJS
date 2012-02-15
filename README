@@ -1,0 +1,22 @@
+
+========
+MotionJS
+========
+
+Copyright 2011 Michael Sauter
+Use at your own risk.
+
+----------------
+Acknowledgements
+----------------
+This framework depends on NodeJS (http://www.nodejs.org) and the following node modules:
+- jake (https://github.com/mde/jake)
+- nodeunit (https://github.com/caolan/nodeunit)
+
+The build system uses JSMin (http://www.crockford.com/javascript/jsmin.html) to minify the requests.
+
+
+-----
+Usage
+-----
+See docs folder for the user manual.

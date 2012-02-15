@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html lang="de">
+	<head>
+		<meta charset="utf-8">
+		<title>Motion Demo - Production</title>
+		<script src="scripts/motion.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript" charset="utf-8">
+			motionjs._configuration.mode = 'production'
+		
+			motionjs.create('org.motionjs.demo/model/car', 'red', function (error, car) {
+			  if (typeof error == 'undefined') {
+					console.log(car)
+				} else {
+					console.log('An error occured, car could not be loaded')
+				}
+			})
+			
+			var func = function () {
+				motionjs.create('org.motionjs.demo/model/bicycle', 'blue', function (error, bicycle) {
+					if (typeof error == 'undefined') {
+						console.log(bicycle)
+					} else {
+						console.log('An error occured, bicycle could not be loaded')
+					}			  	
+				})
+			}
+			setTimeout("func()", 2000)
+		</script>
+	</head>
+<body>
+	Motion Demo - Production
+</body>
+</html>

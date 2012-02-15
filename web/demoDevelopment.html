@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Motion Demo - Development</title>
+		<script src="http://localhost:8080/motion?port=8080" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript" charset="utf-8">
+			var ready = function () {
+				motionjs.create('org.motionjs.demo/model/car', 'red', function (error, car) {				  
+					motionjs.create('org.motionjs.demo/model/car', 'blue', function (error, car2) {
+						motionjs.create('org.motionjs.demo/model/car', 'green', function (error, car3) {
+							console.log(car)
+						  console.log(car2)
+							console.log(car3)
+						})
+					})
+				})
+				setTimeout("func()", 2000)
+			}
+			
+			var func = function () {
+				motionjs.create('org.motionjs.demo/model/bicycle', 'blue', function (error, bicycle) {					
+			  	if (typeof error != 'undefined') {
+						console.log('An error occured, bicycle could not be loaded. Reason: ' + error)						
+					} else {
+						console.log(bicycle)
+					}
+				})
+			}		
+		</script>
+	</head>
+	<body onload="ready()">
+		Motion Demo - Development
+	</body>
+</html>
